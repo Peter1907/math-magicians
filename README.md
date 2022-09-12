@@ -4,7 +4,7 @@ Math Magicians
 
 # Description the project.
 
-A SPA built using React. It contains a calculator & tow other sections.
+A SPA built using React. It contains a calculator & two other sections.
 
 ## Built With
 
@@ -30,9 +30,9 @@ The project is still in development, check this section later.
 
 Contributions, issues, and feature requests are welcome!
 
-You can clone the repo using this link (https://github.com/Peter1907/capstone01.git)
+You can clone the repo using this link (https://github.com/Peter1907/math-magicians.git)
 
-Feel free to check the [issues page](https://github.com/Peter1907/capstone01/issues).
+Feel free to check the [issues page](https://github.com/Peter1907/math-magicians/issues).
 
 ## Show your support
 
