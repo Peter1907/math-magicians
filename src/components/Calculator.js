@@ -1,10 +1,8 @@
 import './Calculator.css';
 import React from 'react';
 
+// eslint-disable-next-line react/prefer-stateless-function
 class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div className="container">
@@ -31,7 +29,7 @@ class Calculator extends React.Component {
           <button type="button" className="key symbol">=</button>
         </div>
       </div>
-    )
+    );
   }
 }
 
