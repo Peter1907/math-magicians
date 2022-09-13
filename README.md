@@ -18,6 +18,14 @@ The project is still in development, check this section later.
 
 The project is still in development, check this section later.
 
+## Getting Started
+
+- You need to have Node, npm & git installed.
+- Clone the repository using this command `git clone https://github.com/Peter1907/math-magicians.git`.
+- You can open the "math-magicians" folder using VSCode or any other editor.
+- Use `npm i` to install all required node modeules.
+- Use `npm start` command to open a live server.
+
 ## Authors
 
 👤 **Author1**
