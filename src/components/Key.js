@@ -1,17 +1,15 @@
 import React from 'react';
 
 class Key extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   keyPress = (e) => {
-    this.props.keyPress(e.target.textContent);
+    const { keyPress } = this.props;
+    keyPress(e.target.textContent);
   }
 
   render() {
+    const { classes, name } = this.props;
     return (
-      <button type="button" className={this.props.class} onClick={this.keyPress}>{this.props.name}</button>
+      <button type="button" className={classes} onClick={this.keyPress}>{name}</button>
     )
   }
 }
