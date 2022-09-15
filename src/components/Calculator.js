@@ -38,8 +38,8 @@ const Calculator = () => {
         <Key classes="key" name="." state={state} setState={setState} />
         <Key classes="key symbol" name="=" state={state} setState={setState} />
       </div>
-    </div> 
+    </div>
   );
-}
+};
 
 export default Calculator;
