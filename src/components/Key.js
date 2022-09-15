@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactPropTypes } from 'react';
+import PropTypes from 'prop-types';
 
 class Key extends React.Component {
   keyPress = (e) => {
@@ -16,9 +16,9 @@ class Key extends React.Component {
 }
 
 Key.propTypes = {
-  keyPress: ReactPropTypes.func.isRequired,
-  classes: ReactPropTypes.string.isRequired,
-  name: ReactPropTypes.string,
-}
+  keyPress: PropTypes.func.isRequired,
+  classes: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
 export default Key;
