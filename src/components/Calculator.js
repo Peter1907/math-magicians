@@ -1,34 +1,72 @@
 import './Calculator.css';
 import React from 'react';
+import calculate from './logic/calculate.js';
 
-class Calculator extends React.PureComponent {
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.keyPress = this.keyPress.bind(this);
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
+
+  keyPress(name) {
+    const result = calculate(this.state, name);
+    this.setState(result);
+  }
+
   render() {
     return (
       <div className="container">
-        <div className="display">0</div>
+        <div className="display">
+          <p>{ this.state.total || '' }</p>
+          <p>{ this.state.operation || '' }</p>
+          <p>{ this.state.next || '' }</p>
+        </div>
         <div className="keys">
-          <button type="button" className="key">AC</button>
-          <button type="button" className="key">+/-</button>
-          <button type="button" className="key">%</button>
-          <button type="button" className="key symbol">÷</button>
-          <button type="button" className="key">7</button>
-          <button type="button" className="key">8</button>
-          <button type="button" className="key">9</button>
-          <button type="button" className="key symbol">&times;</button>
-          <button type="button" className="key">4</button>
-          <button type="button" className="key">5</button>
-          <button type="button" className="key">6</button>
-          <button type="button" className="key symbol">-</button>
-          <button type="button" className="key">1</button>
-          <button type="button" className="key">2</button>
-          <button type="button" className="key">3</button>
-          <button type="button" className="key symbol">+</button>
-          <button type="button" className="zero key">0</button>
-          <button type="button" className="key">.</button>
-          <button type="button" className="key symbol">=</button>
+          <Key class='key' name='AC' keyPress={ this.keyPress } />
+          <Key class='key' name='+/-' keyPress={ this.keyPress } />
+          <Key class='key' name='%' keyPress={ this.keyPress } />
+          <Key class='key symbol' name='÷' keyPress={ this.keyPress } />
+          <Key class='key' name={7} keyPress={ this.keyPress } />
+          <Key class='key' name={8} keyPress={ this.keyPress } />
+          <Key class='key' name={9} keyPress={ this.keyPress } />
+          <Key class='key symbol' name='&times;' keyPress={ this.keyPress } />
+          <Key class='key' name={4} keyPress={ this.keyPress } />
+          <Key class='key' name={5} keyPress={ this.keyPress } />
+          <Key class='key' name={6} keyPress={ this.keyPress } />
+          <Key class='key symbol' name='-' keyPress={ this.keyPress } />
+          <Key class='key' name={1} keyPress={ this.keyPress } />
+          <Key class='key' name={2} keyPress={ this.keyPress } />
+          <Key class='key' name={3} keyPress={ this.keyPress } />
+          <Key class='key symbol' name='+' keyPress={ this.keyPress } />
+          <Key class='key zero' name={0} keyPress={ this.keyPress } />
+          <Key class='key' name='.' keyPress={ this.keyPress } />
+          <Key class='key symbol' name='=' keyPress={ this.keyPress } />
         </div>
       </div>
     );
+  }
+}
+
+Calculator.defaultProps = { keyPress: Calculator.keyPress }
+
+class Key extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  keyPress = (e) => {
+    this.props.keyPress(e.target.textContent);
+  }
+
+  render() {
+    return (
+      <button type='button' className={ this.props.class } onClick={this.keyPress}>{ this.props.name }</button>
+    )
   }
 }
 
