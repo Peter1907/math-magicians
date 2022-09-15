@@ -17,7 +17,7 @@ const Calculator = () => {
         <p>{operation || ''}</p>
         <p>{next || ''}</p>
       </div>
-        <div className="keys">
+      <div className="keys">
         <Key classes="key" name="AC" state={state} setState={setState} />
         <Key classes="key" name="+/-" state={state} setState={setState} />
         <Key classes="key" name="%" state={state} setState={setState} />
@@ -38,8 +38,8 @@ const Calculator = () => {
         <Key classes="key" name="." state={state} setState={setState} />
         <Key classes="key symbol" name="=" state={state} setState={setState} />
       </div>
-    </div>
+    </div> 
   );
-};
+}
 
 export default Calculator;

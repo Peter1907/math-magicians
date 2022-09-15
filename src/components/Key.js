@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import calculate from './logic/calculate';
 
 class Key extends React.Component {
@@ -14,5 +15,12 @@ class Key extends React.Component {
     );
   }
 }
+
+Key.propTypes = {
+  classes: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  state: PropTypes.instanceOf(Array).isRequired,
+  setState: PropTypes.func.isRequired,
+};
 
 export default Key;
