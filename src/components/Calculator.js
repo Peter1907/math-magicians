@@ -8,38 +8,38 @@ const Calculator = () => {
     next: null,
     operation: null,
   });
-  
+
   const { total, operation, next } = state;
   return (
     <div className="container">
-    <div className="display">
-      <p>{total || ''}</p>
-      <p>{operation || ''}</p>
-      <p>{next || ''}</p>
+      <div className="display">
+        <p>{total || ''}</p>
+        <p>{operation || ''}</p>
+        <p>{next || ''}</p>
+      </div>
+        <div className="keys">
+        <Key classes="key" name="AC" state={state} setState={setState} />
+        <Key classes="key" name="+/-" state={state} setState={setState} />
+        <Key classes="key" name="%" state={state} setState={setState} />
+        <Key classes="key symbol" name="÷" state={state} setState={setState} />
+        <Key classes="key" name="7" state={state} setState={setState} />
+        <Key classes="key" name="8" state={state} setState={setState} />
+        <Key classes="key" name="9" state={state} setState={setState} />
+        <Key classes="key symbol" name="&times;" state={state} setState={setState} />
+        <Key classes="key" name="4" state={state} setState={setState} />
+        <Key classes="key" name="5" state={state} setState={setState} />
+        <Key classes="key" name="6" state={state} setState={setState} />
+        <Key classes="key symbol" name="-" state={state} setState={setState} />
+        <Key classes="key" name="1" state={state} setState={setState} />
+        <Key classes="key" name="2" state={state} setState={setState} />
+        <Key classes="key" name="3" state={state} setState={setState} />
+        <Key classes="key symbol" name="+" state={state} setState={setState} />
+        <Key classes="key zero" name="0" state={state} setState={setState} />
+        <Key classes="key" name="." state={state} setState={setState} />
+        <Key classes="key symbol" name="=" state={state} setState={setState} />
+      </div>
     </div>
-    <div className="keys">
-      <Key classes="key" name="AC" state={state} setState={setState} />
-      <Key classes="key" name="+/-" state={state} setState={setState} />
-      <Key classes="key" name="%" state={state} setState={setState} />
-      <Key classes="key symbol" name="÷" state={state} setState={setState} />
-      <Key classes="key" name="7" state={state} setState={setState} />
-      <Key classes="key" name="8" state={state} setState={setState} />
-      <Key classes="key" name="9" state={state} setState={setState} />
-      <Key classes="key symbol" name="&times;" state={state} setState={setState} />
-      <Key classes="key" name="4" state={state} setState={setState} />
-      <Key classes="key" name="5" state={state} setState={setState} />
-      <Key classes="key" name="6" state={state} setState={setState} />
-      <Key classes="key symbol" name="-" state={state} setState={setState} />
-      <Key classes="key" name="1" state={state} setState={setState} />
-      <Key classes="key" name="2" state={state} setState={setState} />
-      <Key classes="key" name="3" state={state} setState={setState} />
-      <Key classes="key symbol" name="+" state={state} setState={setState} />
-      <Key classes="key zero" name="0" state={state} setState={setState} />
-      <Key classes="key" name="." state={state} setState={setState} />
-      <Key classes="key symbol" name="=" state={state} setState={setState} />
-    </div>
-  </div> 
   );
-}
+};
 
 export default Calculator;

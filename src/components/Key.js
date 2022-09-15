@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import calculate from './logic/calculate';
 
 class Key extends React.Component {
@@ -7,7 +6,7 @@ class Key extends React.Component {
     const { state, setState, name } = this.props;
     setState(calculate(state, name));
   }
-  
+
   render() {
     const { classes, name } = this.props;
     return (
@@ -15,12 +14,5 @@ class Key extends React.Component {
     );
   }
 }
-
-Key.propTypes = {
-  classes: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  state: PropTypes.object,
-  setState: PropTypes.func,
-};
 
 export default Key;
