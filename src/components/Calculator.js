@@ -11,7 +11,7 @@ const Calculator = () => {
   const { total, operation, next } = state;
   return (
     <div className="container">
-      <h2 style={{fontSize: "32px"}}>Let's do some math!</h2>
+      <h2 style={{ fontSize: '32px' }}>Let&apos;s do some math!</h2>
       <div className="calculator">
         <div className="display">
           <p>{total || ''}</p>
