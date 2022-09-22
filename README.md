@@ -12,11 +12,11 @@ React
 
 ## Screenshots
 
-The project is still in development, check this section later.
+![](Media/calcScreenShot.jpg)
 
 ## Link to the Page
 
-The project is still in development, check this section later.
+https://papaya-mermaid-965475.netlify.app
 
 ## Getting Started
 
