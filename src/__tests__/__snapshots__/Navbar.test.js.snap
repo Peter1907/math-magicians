@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="nav-container"
+>
+  <h1
+    style={
+      Object {
+        "fontFamily": "'Bungee Spice', cursive",
+        "fontSize": "50px",
+        "margin": "5px 0",
+      }
+    }
+  >
+    Math Magicians
+  </h1>
+  <ul
+    className="links"
+  >
+    <li>
+      <a
+        className="link"
+        href="/"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+    </li>
+    <li
+      className="separator"
+    />
+    <li>
+      <a
+        className="link"
+        href="/calculator"
+        onClick={[Function]}
+      >
+        Calculator
+      </a>
+    </li>
+    <li
+      className="separator"
+    />
+    <li>
+      <a
+        className="link"
+        href="/quote"
+        onClick={[Function]}
+      >
+        Quote
+      </a>
+    </li>
+  </ul>
+</section>
+`;

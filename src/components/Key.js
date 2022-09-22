@@ -19,7 +19,7 @@ class Key extends React.Component {
 Key.propTypes = {
   classes: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  state: PropTypes.instanceOf(Array).isRequired,
+  state: PropTypes.instanceOf(Object).isRequired,
   setState: PropTypes.func.isRequired,
 };
 
